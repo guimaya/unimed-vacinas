@@ -44,7 +44,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 4.5rem 0 0 0;
+  padding: 2.5rem 0 0 0;
 
   .header-container {
     display: flex;
@@ -152,6 +152,7 @@ header {
       height: 1px;
       background-color: var(--light-green);
       width: min(42rem, 100%);
+      margin: 0.75rem 0;
     }
 
     p,
@@ -504,6 +505,12 @@ footer {
 
       .hero-text {
         align-items: center;
+
+        button {
+          margin: 1.5rem 0;
+          font-size: 1.5rem;
+          padding: 1.5rem 2rem;
+        }
       }
     }
   }
@@ -511,6 +518,12 @@ footer {
   .info-section {
     padding-left: 1rem;
     padding-right: 1rem;
+
+    .info-container {
+      h2 {
+        font-size: 2rem;
+      }
+    }
   }
 
   .locations-section {
@@ -534,6 +547,11 @@ footer {
           .central-info {
             a {
               align-self: center;
+
+              button {
+                font-size: 1.5rem;
+                padding: 1.5rem 2rem;
+              }
             }
           }
         }
@@ -547,16 +565,22 @@ footer {
       padding: 0 2rem;
 
       .unity-text {
-        h2 {
-          text-align: center;
-        }
         justify-content: center;
         align-items: center;
         width: min(25rem, 100%);
 
+        h2 {
+          text-align: center;
+        }
+
         .unity-info {
           a {
             align-self: center;
+
+            button {
+              font-size: 1.5rem;
+              padding: 1.5rem 2rem;
+            }
           }
         }
       }
@@ -566,6 +590,11 @@ footer {
   .central-info-section {
     .calendar-container {
       margin: -4rem 2rem 0 2rem;
+
+      button {
+        font-size: 1.5rem;
+        padding: 1rem 2rem;
+      }
     }
 
     .central-info-container {
