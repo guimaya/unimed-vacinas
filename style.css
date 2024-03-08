@@ -15,8 +15,18 @@ html {
   scroll-behavior: smooth;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 button {
   cursor: pointer;
+  transition: 0.5s;
+}
+
+button:hover {
+  scale: 110%;
 }
 
 body {
@@ -55,6 +65,8 @@ header {
       padding: 0.5rem;
       font-weight: bold;
       border-color: var(--light-green);
+      filter: drop-shadow(0 4px 3px var(--light-green))
+        drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));
     }
   }
 }
@@ -106,6 +118,10 @@ header {
         filter: drop-shadow(0 4px 3px var(--light-green))
           drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));
       }
+    }
+
+    img {
+      object-fit: cover;
     }
   }
 }
@@ -170,6 +186,7 @@ header {
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
+
         h2 {
           font-size: 2.25rem;
           font-weight: bold;
@@ -184,12 +201,37 @@ header {
           font-weight: bold;
           padding: 0.5rem 1rem;
           border-radius: 1rem;
-          width: 30rem;
+          width: min(30rem, 100%);
 
           span {
             border-left: 2px solid var(--light-green);
             padding-left: 1rem;
             margin-left: 1rem;
+          }
+        }
+
+        strong {
+          font-size: 1.5rem;
+          font-weight: bold;
+        }
+
+        .central-info {
+          font-size: 1.5rem;
+          display: flex;
+          flex-direction: column;
+          gap: 1.5rem;
+
+          .central-phone {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+          }
+
+          .central-calendar {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            width: min(27rem, 100%);
           }
         }
 
@@ -242,12 +284,37 @@ header {
           font-weight: bold;
           padding: 0.5rem 1rem;
           border-radius: 1rem;
-          width: 16.25rem;
+          width: min(16.25rem, 100%);
 
           span {
             border-left: 2px solid var(--light-green);
             padding-left: 1rem;
             margin-left: 1rem;
+          }
+        }
+
+        strong {
+          font-size: 1.5rem;
+          font-weight: bold;
+        }
+
+        .unity-info {
+          font-size: 1.5rem;
+          display: flex;
+          flex-direction: column;
+          gap: 1.5rem;
+
+          .unity-phone {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+          }
+
+          .unity-calendar {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            width: min(27rem, 100%);
           }
         }
 
@@ -282,6 +349,7 @@ header {
   background-repeat: no-repeat;
   background-size: contain;
   padding-bottom: 5.25rem;
+
   .calendar-container {
     display: flex;
     flex-direction: column;
@@ -299,7 +367,7 @@ header {
       font-weight: bold;
       text-wrap: pretty;
       text-align: center;
-      width: 27rem;
+      width: min(27rem, 100%);
     }
 
     button {
@@ -336,7 +404,7 @@ header {
       font-weight: 400;
       color: #ffff;
       gap: 1rem;
-      width: 32.5rem;
+      width: min(32.5rem, 100%);
     }
   }
 }
@@ -411,5 +479,103 @@ footer {
     justify-content: center;
     gap: 3rem;
     width: min(69.5rem, 100%);
+  }
+}
+
+@media (max-width: 860px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  .hero-section {
+    padding: 2rem;
+
+    .hero-container {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      padding: 0 1rem;
+
+      .hero-text {
+        align-items: center;
+      }
+    }
+  }
+
+  .info-section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .locations-section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    align-items: center;
+    justify-content: center;
+
+    .locations-container {
+      .central-location {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0 2rem;
+
+        .central-text {
+          justify-content: center;
+          align-items: center;
+
+          width: min(25rem, 100%);
+        }
+      }
+    }
+
+    .unity-location {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0 2rem;
+
+      .unity-text {
+        h2 {
+          text-align: center;
+        }
+        justify-content: center;
+        align-items: center;
+        width: min(25rem, 100%);
+      }
+    }
+  }
+
+  .central-info-section {
+    .calendar-container {
+      margin: -4rem 2rem 0 2rem;
+    }
+
+    .central-info-container {
+      flex-direction: column;
+
+      .central-info-description {
+        padding: 0 1rem;
+      }
+    }
+  }
+
+  .faq-section {
+    .faq-container {
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 2rem;
+    }
+  }
+
+  footer {
+    .footer-container {
+      align-items: center;
+      gap: 1.2rem;
+      padding: 0 2rem;
+    }
   }
 }
