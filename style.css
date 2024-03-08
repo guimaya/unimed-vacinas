@@ -273,11 +273,11 @@ header {
   flex-direction: column;
   gap: 4.5rem;
   align-items: center;
-  background-color: var(--dark-green);
+  background-color: var(--green);
   background-image: url('assets/background-asset.svg');
   background-repeat: no-repeat;
-  background-size: cover;
-
+  background-size: contain;
+  padding-bottom: 5.25rem;
   .calendar-container {
     display: flex;
     flex-direction: column;
@@ -313,6 +313,83 @@ header {
       filter: drop-shadow(0 4px 3px var(--orange))
         drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));
       margin-top: 2rem;
+    }
+  }
+
+  .central-info-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    width: min(69.5rem, 100%);
+
+    .central-info-description {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: #ffff;
+      gap: 1rem;
+      width: 32.5rem;
+    }
+  }
+}
+
+.faq-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4.5rem 0;
+
+  .faq-container {
+    width: min(69.5rem, 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+
+    h2 {
+      font-size: 2.25rem;
+      font-weight: bold;
+    }
+
+    .accordion-container {
+      width: min(65.5rem, 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1.5rem;
+
+      .accordion {
+        color: var(--green);
+        font-size: 1.75rem;
+        cursor: pointer;
+        width: auto;
+        padding: 1rem;
+        border-radius: 1rem;
+        border: 2px solid var(--green);
+        background-color: #ffff;
+        text-align: center;
+        outline: none;
+        transition: 0.4s;
+      }
+
+      .active,
+      .accordion:hover {
+        background-color: var(--green);
+        color: #ffff;
+      }
+
+      .panel {
+        padding: 0 1rem;
+        display: none;
+        background-color: white;
+        overflow: hidden;
+      }
     }
   }
 }
