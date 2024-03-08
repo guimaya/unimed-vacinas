@@ -285,7 +285,7 @@ header {
           font-weight: bold;
           padding: 0.5rem 1rem;
           border-radius: 1rem;
-          width: min(16.25rem, 100%);
+          width: min(15rem, 100%);
 
           span {
             border-left: 2px solid var(--light-green);
