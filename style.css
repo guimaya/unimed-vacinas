@@ -12,7 +12,11 @@
 }
 
 html {
-  scrool-behavior: smooth;
+  scroll-behavior: smooth;
+}
+
+button {
+  cursor: pointer;
 }
 
 body {
@@ -391,5 +395,21 @@ header {
         overflow: hidden;
       }
     }
+  }
+}
+
+footer {
+  padding: 4.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--green);
+
+  .footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    width: min(69.5rem, 100%);
   }
 }
