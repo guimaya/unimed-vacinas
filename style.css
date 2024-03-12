@@ -180,6 +180,10 @@ header {
   justify-content: center;
   padding: 4.5rem 0 9rem;
 
+  h2 {
+    color: var(--dark-green);
+  }
+
   .locations-container {
     display: flex;
     flex-direction: column;
@@ -439,6 +443,7 @@ header {
     h2 {
       font-size: 2.25rem;
       font-weight: bold;
+      color: var(--dark-green);
     }
 
     .accordion-container {
