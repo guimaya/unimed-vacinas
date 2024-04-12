@@ -178,6 +178,10 @@ header {
   .banner-hero {
     width: min(69.5rem, 100%);
   }
+
+  .banner-mobile {
+    display: none; /* Hide the mobile banner by default */
+  }
 }
 
 .info-section {
@@ -585,7 +589,17 @@ footer {
   }
 
   header {
-    padding: 1rem;
+    padding: 1rem 0;
+
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 0;
+      .header-button {
+        display: none;
+      }
+    }
   }
 
   .hero-section {
@@ -601,33 +615,60 @@ footer {
       .hero-text {
         align-items: center;
 
+        .header-italic {
+          font-size: 3rem;
+          line-height: 3rem;
+        }
+
+        h1 {
+          font-size: 3.3rem;
+          line-height: 3.3rem;
+          margin-bottom: 2rem;
+        }
+
         button {
           margin: 1.5rem 0;
           font-size: 1.5rem;
           padding: 1.5rem 2rem;
         }
       }
+
+      .image-hero {
+        display: none;
+      }
     }
 
     img {
-      width: min(30rem, 100%);
+      width: 100%;
+    }
+
+    .banner-hero {
+      display: none;
+    }
+
+    .banner-mobile {
+      display: block;
+      border-radius: 1.5rem;
+      margin-top: 2rem;
     }
   }
 
   .info-section {
-    padding-left: 1rem;
-    padding-right: 1rem;
-
     .info-container {
+      padding: 0 3rem;
       h2 {
         font-size: 2rem;
+      }
+
+      p {
+        text-align: justify;
+        align-self: start;
+        margin-top: 1rem;
       }
     }
   }
 
   .locations-section {
-    padding-left: 1rem;
-    padding-right: 1rem;
     align-items: center;
     justify-content: center;
 
@@ -636,12 +677,19 @@ footer {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 0 2rem;
+
+        img {
+          max-width: 28rem;
+        }
 
         .central-text {
           justify-content: center;
           align-items: center;
-          width: min(25rem, 100%);
+          width: min(28rem, 100%);
+
+          .central-heading {
+            min-width: 28rem;
+          }
 
           .central-info {
             a {
@@ -661,15 +709,18 @@ footer {
       flex-direction: column-reverse;
       align-items: center;
       justify-content: center;
-      padding: 0 2rem;
+
+      img {
+        max-width: 28rem;
+      }
 
       .unity-text {
         justify-content: center;
         align-items: center;
-        width: min(25rem, 100%);
+        width: min(28rem, 100%);
 
         .unity-heading {
-          min-width: 20rem;
+          min-width: 28rem;
         }
 
         h2 {
@@ -691,30 +742,47 @@ footer {
   }
 
   .vr-section {
-    .calendar-container {
-      flex-direction: column;
-      text-align: center;
-    }
+    padding: 1rem 0;
+    .vr-container {
+      .calendar-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 2.5rem;
+        gap: 1.5rem;
 
-    padding: 4rem;
+        h2 {
+          width: 100%;
+          font-size: 1.4rem;
+        }
+      }
 
-    .vr-description {
-      flex-direction: column;
-      padding: 0 6rem;
-      font-size: 60%;
-      text-align: center;
-      img {
-        max-width: 25rem;
+      padding: 4rem;
+
+      .vr-description {
+        flex-direction: column;
+        text-align: center;
+
+        img {
+          max-width: 25rem;
+        }
       }
     }
   }
 
   .faq-section {
+    padding: 2rem 0;
+
     .faq-container {
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 0 2rem;
+      padding: 0 1rem;
+
+      .question {
+        h3 {
+          font-size: 1.5rem;
+        }
+      }
     }
   }
 
