@@ -618,12 +618,15 @@ footer {
         .header-italic {
           font-size: 2.5rem;
           line-height: 3rem;
+          text-align: left;
+          align-self: flex-start;
+          margin: 0;
         }
 
         h1 {
           font-size: 3rem;
           line-height: 3.3rem;
-          margin-bottom: 2rem;
+          margin: 2rem 0;
         }
 
         button {
